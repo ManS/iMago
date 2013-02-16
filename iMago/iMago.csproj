@@ -1,0 +1,675 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DFE37728-D2F5-46AF-87DC-83B75EC601A0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>iMago</RootNamespace>
+    <AssemblyName>iMago</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>PackageIcon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge">
+      <HintPath>Dlls\AForge.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Imaging">
+      <HintPath>Dlls\AForge.Imaging.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Math">
+      <HintPath>Dlls\AForge.Math.dll</HintPath>
+    </Reference>
+    <Reference Include="AngleAltitudeControls">
+      <HintPath>Dlls\AngleAltitudeControls.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v9.2">
+      <HintPath>Dlls\DevExpress.BonusSkins.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.v9.2">
+      <HintPath>Dlls\DevExpress.Data.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v9.2">
+      <HintPath>Dlls\DevExpress.Utils.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v9.2">
+      <HintPath>Dlls\DevExpress.XtraBars.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v9.2">
+      <HintPath>Dlls\DevExpress.XtraEditors.v9.2.dll</HintPath>
+    </Reference>
+    <Reference Include="IMAGOSKIN">
+      <HintPath>Dlls\IMAGOSKIN.dll</HintPath>
+    </Reference>
+    <Reference Include="Matlab">
+      <HintPath>Dlls\Matlab.dll</HintPath>
+    </Reference>
+    <Reference Include="MWArray, Version=2.11.0.0, Culture=neutral, PublicKeyToken=e1d84a0da19db86f, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MATLAB\MATLAB Compiler Runtime\v715\toolbox\dotnetbuilder\bin\win64\v2.0\MWArray.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceGrid2">
+      <HintPath>Dlls\SourceGrid2.dll</HintPath>
+    </Reference>
+    <Reference Include="SourceLibrary">
+      <HintPath>Dlls\SourceLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AdaptiveThresholding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AdaptiveThresholding.Designer.cs">
+      <DependentUpon>AdaptiveThresholding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddNoise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddNoise.Designer.cs">
+      <DependentUpon>AddNoise.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ArithmeticAndLogicalOperations.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ArithmeticAndLogicalOperations.Designer.cs">
+      <DependentUpon>ArithmeticAndLogicalOperations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BitPlaneSlicer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BitPlaneSlicer.Designer.cs">
+      <DependentUpon>BitPlaneSlicer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BlurringForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BlurringForm.Designer.cs">
+      <DependentUpon>BlurringForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Border.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Border.Designer.cs">
+      <DependentUpon>Border.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BrightnessContrast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\BrightnessContrast.Designer.cs">
+      <DependentUpon>BrightnessContrast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ColorSlider.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Convolution.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Convolution.Designer.cs">
+      <DependentUpon>Convolution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Cropping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Cropping.Designer.cs">
+      <DependentUpon>Cropping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Curves.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Curves.Designer.cs">
+      <DependentUpon>Curves.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EnhancForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EnhancForm.Designer.cs">
+      <DependentUpon>EnhancForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Epsilon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Epsilon.Designer.cs">
+      <DependentUpon>Epsilon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Error.Designer.cs">
+      <DependentUpon>Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ExponentialNoiseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ExponentialNoiseForm.Designer.cs">
+      <DependentUpon>ExponentialNoiseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FilterForm.Designer.cs">
+      <DependentUpon>FilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FilterPreview.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Filters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Filters.Designer.cs">
+      <DependentUpon>Filters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FourierFilters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FourierFilters.Designer.cs">
+      <DependentUpon>FourierFilters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrequencyDomainEnhancement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrequencyDomainEnhancement.Designer.cs">
+      <DependentUpon>FrequencyDomainEnhancement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrequencyDomainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrequencyDomainForm.Designer.cs">
+      <DependentUpon>FrequencyDomainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GammaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GammaForm.Designer.cs">
+      <DependentUpon>GammaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Gaussian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Gaussian.Designer.cs">
+      <DependentUpon>Gaussian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GaussianNoiseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\GaussianNoiseForm.designer.cs">
+      <DependentUpon>GaussianNoiseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GridArrayInt.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\Histogram.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Forms\HistogramMatching.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HistogramMatching.Designer.cs">
+      <DependentUpon>HistogramMatching.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\HistogramSlicing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\HistogramSlicing.Designer.cs">
+      <DependentUpon>HistogramSlicing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Homomorphic Filtering.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Homomorphic Filtering.Designer.cs">
+      <DependentUpon>Homomorphic Filtering.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImageCurve.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ImageCurve.designer.cs">
+      <DependentUpon>ImageCurve.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ImagePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\ImagePanel.designer.cs">
+      <DependentUpon>ImagePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LaplacianOfGaussianForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LaplacianOfGaussianForm.Designer.cs">
+      <DependentUpon>LaplacianOfGaussianForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\LevelsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\LevelsForm.Designer.cs">
+      <DependentUpon>LevelsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MorphologyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MorphologyForm.Designer.cs">
+      <DependentUpon>MorphologyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MouseEvents.cs" />
+    <Compile Include="Forms\NormalThreshold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NormalThreshold.Designer.cs">
+      <DependentUpon>NormalThreshold.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NotchFilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NotchFilterForm.Designer.cs">
+      <DependentUpon>NotchFilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OrderStatisticsFilters.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\OrderStatisticsFilters.Designer.cs">
+      <DependentUpon>OrderStatisticsFilters.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PeriodicNoiseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PeriodicNoiseForm.Designer.cs">
+      <DependentUpon>PeriodicNoiseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QuantizationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QuantizationForm.designer.cs">
+      <DependentUpon>QuantizationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QuantizeBy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\QuantizeBy.Designer.cs">
+      <DependentUpon>QuantizeBy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ResizeByFactorInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ResizeByFactorInputForm.Designer.cs">
+      <DependentUpon>ResizeByFactorInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ResizingInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ResizingInputForm.Designer.cs">
+      <DependentUpon>ResizingInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RetinexForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RetinexForm.Designer.cs">
+      <DependentUpon>RetinexForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RotationInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RotationInputForm.Designer.cs">
+      <DependentUpon>RotationInputForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SavingFormat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SavingFormat.Designer.cs">
+      <DependentUpon>SavingFormat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Shear.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Shear.Designer.cs">
+      <DependentUpon>Shear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Slicing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Slicing.Designer.cs">
+      <DependentUpon>Slicing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Text Hidding.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Text Hidding.Designer.cs">
+      <DependentUpon>Text Hidding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ThresholdForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ThresholdForm.Designer.cs">
+      <DependentUpon>ThresholdForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TimeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\TimeForm.Designer.cs">
+      <DependentUpon>TimeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Translation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Translation.Designer.cs">
+      <DependentUpon>Translation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ZeroCrossing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ZeroCrossing.Designer.cs">
+      <DependentUpon>ZeroCrossing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper classes\ImageManipulator.cs" />
+    <Compile Include="Helper classes\IManipulatorObserver.cs" />
+    <Compile Include="Helper classes\IManipulatorSubject.cs" />
+    <Compile Include="Forms\ImgCbo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Helper classes\MyImage.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helper classes\Serialize2DimArray.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AdaptiveThresholding.resx">
+      <DependentUpon>AdaptiveThresholding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddNoise.resx">
+      <DependentUpon>AddNoise.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ArithmeticAndLogicalOperations.resx">
+      <DependentUpon>ArithmeticAndLogicalOperations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BitPlaneSlicer.resx">
+      <DependentUpon>BitPlaneSlicer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BlurringForm.resx">
+      <DependentUpon>BlurringForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Border.resx">
+      <DependentUpon>Border.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\BrightnessContrast.resx">
+      <DependentUpon>BrightnessContrast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ColorSlider.resx">
+      <DependentUpon>ColorSlider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Convolution.resx">
+      <DependentUpon>Convolution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Cropping.resx">
+      <DependentUpon>Cropping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Curves.resx">
+      <DependentUpon>Curves.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EnhancForm.resx">
+      <DependentUpon>EnhancForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Epsilon.resx">
+      <DependentUpon>Epsilon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Error.resx">
+      <DependentUpon>Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ExponentialNoiseForm.resx">
+      <DependentUpon>ExponentialNoiseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FilterForm.resx">
+      <DependentUpon>FilterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FilterPreview.resx">
+      <DependentUpon>FilterPreview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Filters.resx">
+      <DependentUpon>Filters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FourierFilters.resx">
+      <DependentUpon>FourierFilters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrequencyDomainEnhancement.resx">
+      <DependentUpon>FrequencyDomainEnhancement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrequencyDomainForm.resx">
+      <DependentUpon>FrequencyDomainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GammaForm.resx">
+      <DependentUpon>GammaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Gaussian.resx">
+      <DependentUpon>Gaussian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GaussianNoiseForm.resx">
+      <DependentUpon>GaussianNoiseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\GridArrayInt.resx">
+      <DependentUpon>GridArrayInt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Histogram.resx">
+      <DependentUpon>Histogram.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HistogramMatching.resx">
+      <DependentUpon>HistogramMatching.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\HistogramSlicing.resx">
+      <DependentUpon>HistogramSlicing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Homomorphic Filtering.resx">
+      <DependentUpon>Homomorphic Filtering.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImageCurve.resx">
+      <DependentUpon>ImageCurve.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ImagePanel.resx">
+      <DependentUpon>ImagePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LaplacianOfGaussianForm.resx">
+      <DependentUpon>LaplacianOfGaussianForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\LevelsForm.resx">
+      <DependentUpon>LevelsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MorphologyForm.resx">
+      <DependentUpon>MorphologyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NormalThreshold.resx">
+      <DependentUpon>NormalThreshold.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NotchFilterForm.resx">
+      <DependentUpon>NotchFilterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\OrderStatisticsFilters.resx">
+      <DependentUpon>OrderStatisticsFilters.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PeriodicNoiseForm.resx">
+      <DependentUpon>PeriodicNoiseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QuantizationForm.resx">
+      <DependentUpon>QuantizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\QuantizeBy.resx">
+      <DependentUpon>QuantizeBy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ResizeByFactorInputForm.resx">
+      <DependentUpon>ResizeByFactorInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ResizingInputForm.resx">
+      <DependentUpon>ResizingInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RetinexForm.resx">
+      <DependentUpon>RetinexForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RotationInputForm.resx">
+      <DependentUpon>RotationInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SavingFormat.resx">
+      <DependentUpon>SavingFormat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Shear.resx">
+      <DependentUpon>Shear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Slicing.resx">
+      <DependentUpon>Slicing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Text Hidding.resx">
+      <DependentUpon>Text Hidding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ThresholdForm.resx">
+      <DependentUpon>ThresholdForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\TimeForm.resx">
+      <DependentUpon>TimeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Translation.resx">
+      <DependentUpon>Translation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ZeroCrossing.resx">
+      <DependentUpon>ZeroCrossing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\About.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iMago User guide.pdf" />
+    <None Include="Resources\Package-Splash-No.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\triangle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Filters\Filters.csproj">
+      <Project>{01B9BCE2-5466-4DF5-B191-5160D177B9E4}</Project>
+      <Name>Filters</Name>
+    </ProjectReference>
+    <ProjectReference Include="ImageManipulation\ImageManipulation.csproj">
+      <Project>{714EAFE0-8C1A-459F-A64F-3B04D845F161}</Project>
+      <Name>ImageManipulation</Name>
+    </ProjectReference>
+    <ProjectReference Include="ImageStatistics\ImageStatistics.csproj">
+      <Project>{AA9F71C7-2CC6-47D6-A773-4121054EF2EC}</Project>
+      <Name>ImageStatistics</Name>
+    </ProjectReference>
+    <ProjectReference Include="Utilities\Utilities.csproj">
+      <Project>{2CDAEB9C-EBEE-454B-8EA5-1DECB7B03DE7}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PackageIcon.ico" />
+    <None Include="Resources\Borders\22.jpg" />
+    <None Include="Resources\Borders\21.jpg" />
+    <None Include="Resources\Borders\20.jpg" />
+    <None Include="Resources\Borders\19.jpg" />
+    <None Include="Resources\Borders\18.jpg" />
+    <None Include="Resources\Borders\17.jpg" />
+    <None Include="Resources\Borders\16.jpg" />
+    <None Include="Resources\Borders\15.jpg" />
+    <None Include="Resources\Borders\14.jpg" />
+    <None Include="Resources\Borders\13.jpg" />
+    <None Include="Resources\Borders\12.jpg" />
+    <None Include="Resources\Borders\11.jpg" />
+    <None Include="Resources\Borders\10.jpg" />
+    <None Include="Resources\Borders\9.jpg" />
+    <None Include="Resources\Borders\8.jpg" />
+    <None Include="Resources\Borders\7.jpg" />
+    <None Include="Resources\Borders\6.jpg" />
+    <None Include="Resources\Borders\5.jpg" />
+    <None Include="Resources\Borders\4.jpg" />
+    <None Include="Resources\Borders\3.jpg" />
+    <None Include="Resources\Borders\2.jpg" />
+    <None Include="Resources\Borders\1.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

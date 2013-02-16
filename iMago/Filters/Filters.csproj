@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{01B9BCE2-5466-4DF5-B191-5160D177B9E4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Filters</RootNamespace>
+    <AssemblyName>Filters</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>
+    </DocumentationFile>
+    <RegisterForComInterop>false</RegisterForComInterop>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Matlab">
+      <HintPath>..\Dlls\Matlab.dll</HintPath>
+    </Reference>
+    <Reference Include="MWArray, Version=2.11.0.0, Culture=neutral, PublicKeyToken=e1d84a0da19db86f, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MATLAB\MATLAB Compiler Runtime\v715\toolbox\dotnetbuilder\bin\win64\v2.0\MWArray.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blurring\GaussianBlurring1D.cs" />
+    <Compile Include="Blurring\GaussianBlurring2D.cs" />
+    <Compile Include="Blurring\MeanBlurring1D.cs" />
+    <Compile Include="Blurring\MeanBlurring2D.cs" />
+    <Compile Include="Blurring\WeightFilter.cs" />
+    <Compile Include="CustomFilter.cs" />
+    <Compile Include="EdgeDetectors\LaplacianEdgeDetector.cs" />
+    <Compile Include="EdgeDetectors\LaplacianOfGaussian.cs" />
+    <Compile Include="EdgeDetectors\PrewittCompassEdgeDetectors.cs" />
+    <Compile Include="EdgeDetectors\SobleEdgeDetector.cs" />
+    <Compile Include="EdgeDetectors\ZeroCrossingEdgeDetector.cs" />
+    <Compile Include="FourierTransformer.cs" />
+    <Compile Include="FrequencyFilters\BandFilter.cs" />
+    <Compile Include="FrequencyFilters\ButterWorseFilter.cs" />
+    <Compile Include="FrequencyFilters\GaussianFilter.cs" />
+    <Compile Include="FrequencyFilters\HomomorphicFilter.cs" />
+    <Compile Include="FrequencyFilters\IdealFilter.cs" />
+    <Compile Include="FrequencyFilters\IFrequencyFilter.cs" />
+    <Compile Include="FrequencyFilters\NotchFilter.cs" />
+    <Compile Include="I1DConvolution.cs" />
+    <Compile Include="I2DConvolution.cs" />
+    <Compile Include="IFilter.cs" />
+    <Compile Include="Morphology\Dilatation.cs" />
+    <Compile Include="Morphology\Erosion.cs" />
+    <Compile Include="Morphology\IMorphologyFilter.cs" />
+    <Compile Include="NoiseGenerators\Additive Filters\ExponentialNoise.cs" />
+    <Compile Include="NoiseGenerators\Additive Filters\GammaNoise.cs" />
+    <Compile Include="NoiseGenerators\Additive Filters\GaussianNoise.cs" />
+    <Compile Include="NoiseGenerators\Additive Filters\IAdditiveRandomNoise.cs" />
+    <Compile Include="NoiseGenerators\Additive Filters\RayleighNoise.cs" />
+    <Compile Include="NoiseGenerators\IRandomNoise.cs" />
+    <Compile Include="NoiseGenerators\PeriodicNoise.cs" />
+    <Compile Include="NoiseGenerators\SaltAndPepperNoise.cs" />
+    <Compile Include="NoiseGenerators\UniformNoise.cs" />
+    <Compile Include="NoiseRemovers\Mean Filters\ContraHarmonic.cs" />
+    <Compile Include="NoiseRemovers\Mean Filters\GeometricFilter.cs" />
+    <Compile Include="NoiseRemovers\Mean Filters\IMeanFilter.cs" />
+    <Compile Include="NoiseRemovers\Order Statistics Filters\AdaptiveMedianFilter.cs" />
+    <Compile Include="NoiseRemovers\Order Statistics Filters\AlphaTrim.cs" />
+    <Compile Include="NoiseRemovers\Order Statistics Filters\FastMedian.cs" />
+    <Compile Include="NoiseRemovers\Order Statistics Filters\MaximumFilter.cs" />
+    <Compile Include="NoiseRemovers\Order Statistics Filters\MedianFilter.cs" />
+    <Compile Include="NoiseGenerators\INoiseGenerator.cs" />
+    <Compile Include="NoiseRemovers\Mean Filters\INoiseRemover.cs" />
+    <Compile Include="NoiseRemovers\Order Statistics Filters\IOrderFilter.cs" />
+    <Compile Include="NoiseRemovers\Order Statistics Filters\MidPointFilter.cs" />
+    <Compile Include="NoiseRemovers\Order Statistics Filters\MinimumFilter.cs" />
+    <Compile Include="NoiseRemovers\Order Statistics Filters\OrderFiltersFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sharping\HighBoostFilter.cs" />
+    <Compile Include="Sharping\LaplacianSharpening.cs" />
+    <Compile Include="Sharping\LineSharpening.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Utilities\Utilities.csproj">
+      <Project>{2CDAEB9C-EBEE-454B-8EA5-1DECB7B03DE7}</Project>
+      <Name>Utilities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
